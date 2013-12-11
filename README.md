@@ -16,6 +16,8 @@ The basic features of the OS is installed on demand.
  - Nodejs
  - Composer
  - VirtualEnv
+ - PIP
+ - PIL
  - MySql Percona
  - Postgres
  - Sites templates for PHP and Django
@@ -51,6 +53,7 @@ To add new website there are two scripts on manifests dir.
     php.pp and django.pp
 
 > **Note**: on a django project you have to create directory logs on your project directory. Add the following two lines to the ini file created by puppet (/etc/uwsgi/apps-available/project-created-ini.ini:
+
 		chmod-socket = 666
 		chown-socket = www-data:www-data
 
