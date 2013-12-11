@@ -50,6 +50,8 @@ To add new website there are two scripts on manifests dir.
 
     php.pp and django.pp
 
+> **Note**: on a django project you have to create directory logs on your project directory.
+
 All you have to do is to edit the file of your choice adding your project configurations and then ssh to vagrant to apply it.
 
     vagrant ssh
