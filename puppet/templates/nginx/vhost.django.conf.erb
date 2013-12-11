@@ -29,7 +29,7 @@ server {
     }
 
     location ~ ^/(static|media)/(.*)$ {
-        alias <%= @root %>/<%= @name %>/$1/$2;
+        alias <%= @root %>/$1/$2;
     }
 
 }
