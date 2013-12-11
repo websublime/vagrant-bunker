@@ -28,9 +28,7 @@ The basic features of the OS is installed on demand.
 ----------
 Usage and Info
 ---------
-Install [vagrant dns plugin][1].
-Virtual enviroment is installed in /home/vagrant/.virtualenvs.
-This machine uses puppet-labs for modules.
+Install [vagrant dns plugin][1]. Virtual enviroment is installed in /home/vagrant/.virtualenvs. This machine uses puppet-labs for modules.
 
 To add new names resolution please add it to your vagrant file and follow the instruction of [vagrant dns plugin][1]. Example:
 
@@ -39,6 +37,8 @@ To add new names resolution please add it to your vagrant file and follow the in
     config.dns.patterns = [ /^.*bunkerbox.dev$/, /^.*websublime.dev$/]
     
 Add on dns.patterns. The current pattern responds to domains an subdomains. Please do not change hostname because provision scripts are node based on this name.
+
+Mysql and Postegres uses credentials (root/vagrant). For mysql you have phpmyadmin installed at: http://www.bunkerbox.dev/phpmyadmin/. If you want to access with a client please grant access privileges on phpmyadmin.
 
 Basic clone this repo and construct your virtual box with:
 
