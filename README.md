@@ -50,7 +50,9 @@ To add new website there are two scripts on manifests dir.
 
     php.pp and django.pp
 
-> **Note**: on a django project you have to create directory logs on your project directory.
+> **Note**: on a django project you have to create directory logs on your project directory. Add the following two lines to the ini file created by puppet (/etc/uwsgi/apps-available/project-created-ini.ini:
+		chmod-socket = 666
+		chown-socket = www-data:www-data
 
 All you have to do is to edit the file of your choice adding your project configurations and then ssh to vagrant to apply it.
 
