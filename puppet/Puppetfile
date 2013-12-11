@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+forge "http://forge.puppetlabs.com"
+
+mod "apt", :git => "git://github.com/puppetlabs/puppetlabs-apt.git"
+mod "stdlib", :git => "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+mod 'concat', :git => 'git://github.com/puppetlabs/puppetlabs-concat.git'
+mod "php", :git => "git://github.com/guruHub/puppet-php.git"
+mod "nginx", :git => "git://github.com/davidwinter/puppet-nginx.git"
+mod "percona", :git => "git://github.com/arioch/puppet-percona.git"
+mod 'xdebug', :git => 'git://github.com/puphpet/puphpet-xdebug.git'
+mod 'composer', :git => 'git://github.com/puphpet/puppet-composer.git'
+mod 'ntp', :git => 'git://github.com/puppetlabs/puppetlabs-ntp.git'
+mod 'postgresql', :git => 'git://github.com/puppetlabs/puppetlabs-postgresql.git'
+mod 'nodejs', :git => 'git://github.com/puppetlabs/puppetlabs-nodejs.git'
+mod 'uwsgi', :git => 'git://github.com/althalus/puppet-uwsgi.git'
