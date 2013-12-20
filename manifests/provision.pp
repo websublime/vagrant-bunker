@@ -79,7 +79,7 @@ class web::vhosts
   $sites_dir = $provision::params::sites_dir
   $nginx_dir = "${provision::params::templates_dir}/nginx"
 
-  nginx::vhost { "default":
+  nginx::vhost { "www.bunkerbox.dev":
     root     => "${sites_dir}/default",
     index    => "index.php",
     template => "${nginx_dir}/default.conf.erb"
@@ -125,7 +125,7 @@ class mypercona::rights
 }
 
 node 'bunkerbox' {
-  
+
   include provision::params
   include apt, php, php::fpm, composer
 
@@ -166,7 +166,7 @@ node 'bunkerbox' {
   class { 'postgresql::server::contrib':
     package_ensure  => present
   }
-  
+
   class { 'postgresql::lib::python':
     package_ensure  => present
   }
