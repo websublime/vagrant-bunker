@@ -18,11 +18,11 @@ class aptupdate {
 
 stage { "pre": before => Stage["py"] }
 class packages {
-    package { 
+    package {
         'build-essential': ensure => latest;
         'libshadow': ensure => latest, provider => 'gem', require => Package["build-essential"];
         "lsb-release": ensure => latest, require => Package["build-essential"];
-        "git-core": ensure => latest, require => Package["build-essential"]; 
+        "git-core": ensure => latest, require => Package["build-essential"];
         "g++": ensure => latest, require => Package["build-essential"];
         "make": ensure => latest, require => Package["build-essential"];
         "wget": ensure => latest, require => Package["build-essential"];
@@ -99,7 +99,7 @@ class pyimage {
     require => Package['python'],
     before => Exec['pil png', 'pil jpg', 'pil freetype']
   }
-  
+
   exec { 'pil png':
     command => 'sudo ln -s /usr/lib/`uname -i`-linux-gnu/libz.so /usr/lib/',
     unless => 'test -L /usr/lib/libz.so'
@@ -109,7 +109,7 @@ class pyimage {
     command => 'sudo ln -s /usr/lib/`uname -i`-linux-gnu/libjpeg.so /usr/lib/',
     unless => 'test -L /usr/lib/libjpeg.so'
   }
-  
+
   exec { 'pil freetype':
     command => 'sudo ln -s /usr/lib/`uname -i`-linux-gnu/libfreetype.so /usr/lib/',
     unless => 'test -L /usr/lib/libfreetype.so'
@@ -122,7 +122,6 @@ class application {
       'mercurial': ensure => installed;
       'uwsgi': ensure => installed;
       'uwsgi-plugin-python': ensure => installed, require => Package["uwsgi"];
-      'libmysqlclient-dev': ensure => installed;
       "postgresql": ensure => installed;
   }
 }

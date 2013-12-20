@@ -11,14 +11,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.dns.tld = "dev"
   config.vm.hostname = "bunkerbox"
   config.dns.patterns = [
-    /^.*bunkerbox.dev$/, 
-    /^.*vilarte.dev$/, 
-    /^.*expression.dev$/, 
+    /^.*bunkerbox.dev$/,
+    /^.*vilarte.dev$/,
+    /^.*expression.dev$/,
     /^.*farol.dev$/,
     /^.*ccea.dev$/,
     /^.*repo.dev$/,
     /^.*wordpress.dev$/,
-    /^.*websublime.dev$/
+    /^.*websublime.dev$/,
+    /^.*evady.dev$/
   ]
 
   # Every Vagrant virtual environment requires a box to build off of.
